@@ -9,14 +9,14 @@
 import UIKit
 
 private let info = Bundle.main.infoDictionary ?? [:]
-let appName: String = (info["CFBundleDisplayName"] as? String) ?? ""
-let appVersion: String = (info["CFBundleShortVersionString"] as? String) ?? ""
-let appBuild: String = (info["CFBundleVersion"] as? String) ?? ""
-let bundleId: String = (info["CFBundleIdentifierKey"] as? String) ?? ""
-let projName: String = (info["CFBundleExecutableKey"] as? String) ?? ""
+public let appName: String = (info["CFBundleDisplayName"] as? String) ?? ""
+public let appVersion: String = (info["CFBundleShortVersionString"] as? String) ?? ""
+public let appBuild: String = (info["CFBundleVersion"] as? String) ?? ""
+public let bundleId: String = (info["CFBundleIdentifierKey"] as? String) ?? ""
+public let projName: String = (info["CFBundleExecutableKey"] as? String) ?? ""
 //这个id不能保证唯一，如果要保证唯一，需要存到KeyChain中
-let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? ""
-let deviceName = UIDevice.current.systemName
-let deviceVersion = UIDevice.current.systemVersion
-let deviceModel = UIDevice.current.model
-let deviceLocalModel = UIDevice.current.localizedModel
+public let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? ""
+public let deviceName = UIDevice.current.systemName
+public let deviceVersion = UIDevice.current.systemVersion
+public let deviceModel = UIDevice.current.model
+public let deviceLocalModel = UIDevice.current.localizedModel
